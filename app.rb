@@ -19,7 +19,13 @@ get '/love' do
   "<3"
 end
 
-get '/cats' do
+get '/random-cats' do
   @random_name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
