@@ -1,0 +1,6 @@
+<% if @name.nil? %>
+<form method="post" action="/named-cat">
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
+<% end %>
